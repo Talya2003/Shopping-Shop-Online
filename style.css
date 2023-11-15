@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=DM+Serif+Display&family=EB+Garamond:wght@400;500;600;700;800&family=Forum&family=Nunito:wght@200;300;400;500;600&display=swap');
 
 /*-------------------*\
         property 
@@ -17,5 +18,180 @@
     --onyx: hsl(0, 0%, 27%);
 
     /* topography */
+    --fs-1: 1.563rem;
+    --fs-2: 1.375rem;
+    --fs-3: 1.25rem;
+    --fs-4: 1.125rem;
+    --fs-5: 1rem;
+    --fs-6: 0.938rem;
+    --fs-7: 0.875rem;
+    --fs-8: 0.813rem;
+    --fs-9: 0.75rem;
+    --fs-10: 0.688rem;
+    --fs-11: 0.625rem;
+
+    --weight-300: 300;
+    --weight-400: 400;
+    --weight-500: 500;
+    --weight-600: 600;
+    --weight-700: 700;
     
+    /* border radius */
+    --border-radius-md: 10px;
+    --border-radius-sm: 5px;
+
+    /* transition */
+    --transition-timing: 0.2s ease;
+}
+
+
+
+
+/*-------------------*\
+          reset 
+\*-------------------*/
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    background: none;
+    font: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+img, i, button, a{
+    display: block;
+}
+
+span{
+    display: inline-block;
+}
+
+html{
+    font-family: 'EB Garamond' , sans-serif;
+    overscroll-behavior: contain;
+}
+
+input{
+    display: block;
+    width: 100%;
+    font: inherit;
+}
+
+input::placeholder{
+    font: inherit;
+}
+
+body{
+    background: var(--white);
+}
+
+
+/*-------------------*\
+    scrollbar style 
+\*-------------------*/
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track{
+    background: var(--white);
+    border-left: 1px solid var(--cultured);
+}
+
+body::-webkit-scrollbar-thumb{
+    background: hsl(0, 0%, 80%);
+    border: 3px solid var(--white);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background: hsl(0, 0%, 70%);
+}
+
+
+
+/*-------------------*\
+      reused style 
+\*-------------------*/
+
+
+
+/*-------------------*\
+          main 
+\*-------------------*/
+
+/* overlay */
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsla(0, 0%, 0%, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 15;
+    transition: 0.5s ease;
+}
+
+.overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* modal */
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: hsla(0, 0%, 0%, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* opacity: 0;
+    visibility: hidden;
+    pointer-events: none; */
+    z-index: 10;
+    /* animation: popup 1s ease-in-out 5s forwards; */
+}
+
+@keyframes popup{
+    0%{
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+}
+
+.modal .closed{
+    display: none;
+}
+
+.modal-close-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
