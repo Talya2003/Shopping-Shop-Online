@@ -250,7 +250,7 @@ body::-webkit-scrollbar-thumb:hover{
 
 .newsletter-title{
     color: var(--onyx);
-    font-size: var(--fs-2);
+    font-size: var(--fs-1);
     font-weight: var(--weight-600);
     margin-bottom: 10px;
 }
@@ -264,4 +264,21 @@ body::-webkit-scrollbar-thumb:hover{
     border-radius: var(--border-radius-sm);
     border: 1px solid var(--cultured);
     margin-bottom: 16px;
+}
+
+.btn-newsletter{
+    background: var(--eerie-black);
+    color: var(--white);
+    font-size: var(--fs-7);
+    font-weight: var(--weight-600);
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: var(--border-radius-sm);
+    margin: auto;
+    transition: var(--transition-timing);
+    margin-top: 20px;
+}
+
+.btn-newsletter:hover{
+    background: var(--salmon-pink);
 }
