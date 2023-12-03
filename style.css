@@ -95,7 +95,15 @@ input::placeholder{
 }
 
 body{
-    background: var(--white);
+    background: var(white);
+}
+
+body.modal open {
+    overflow: hidden;
+}
+
+body .modal open .overlay, body.modal open .modal {
+    display: none;
 }
 
 
@@ -183,7 +191,7 @@ body::-webkit-scrollbar-thumb:hover{
     }
 }
 
-.modal .closed{
+.modal.closed{
     display: none;
 }
 
@@ -208,12 +216,12 @@ body::-webkit-scrollbar-thumb:hover{
     border-radius: var(--border-radius-md);
     overflow: hidden;
     z-index: 2;
-    animation: 0.5s ease-in-out 5s forwards;
+    /* animation: 0.5s ease-in-out 5s forwards; */
 }
 
 @keyframes scaleUp{
     0%{
-        transform: matrix(scale(0.9));
+        transform: scale(0.9);
     }
     100%{
         transform: scale(1);
@@ -281,4 +289,8 @@ body::-webkit-scrollbar-thumb:hover{
 
 .btn-newsletter:hover{
     background: var(--salmon-pink);
+}
+
+closed{
+    display: none;
 }
